@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TutorialsList = ({ title, tuts }) => {
+export const TutorialsList = ({ title, tuts }) => {
   return (
     <div>
       <h6>{title}</h6>
