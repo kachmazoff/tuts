@@ -1,2 +1,2 @@
-export { tutorialsListSlice } from './reducer';
-export { TutorialsListModule } from './TutorialsListModule';
+export { tutorialsListSlice } from "./reducer";
+export { TutorialsListModule } from "./TutorialsListModule";

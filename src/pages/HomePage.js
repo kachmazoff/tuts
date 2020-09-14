@@ -1,5 +1,5 @@
-import React from 'react'
-import { TutorialsListModule } from '../modules'
+import React from "react";
+import { TutorialsListModule } from "../modules";
 
 export const HomePage = () => {
   return (
@@ -7,5 +7,5 @@ export const HomePage = () => {
       <h1>Home page</h1>
       <TutorialsListModule />
     </div>
-  )
-}
+  );
+};

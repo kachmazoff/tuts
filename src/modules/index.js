@@ -1,1 +1,1 @@
-export { TutorialsListModule } from './TutorialsListModule';
+export { TutorialsListModule } from "./TutorialsListModule";

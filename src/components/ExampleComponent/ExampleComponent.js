@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function ExampleComponent(props) {
-  return (
-    <div>
-      Hello, {props.name}
-    </div>
-  )
+  return <div>Hello, {props.name}</div>;
 }
 
-export { ExampleComponent }
+export { ExampleComponent };
