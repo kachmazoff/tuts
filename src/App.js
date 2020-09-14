@@ -1,18 +1,22 @@
 import React from 'react';
+import { Provider } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import './App.css';
+import { store } from './store';
 import { HomePage } from './pages/HomePage';
+import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="*">
-          404 page
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="*">
+            404 page
         </Route>
-      </Switch>
-    </BrowserRouter>
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
