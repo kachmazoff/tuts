@@ -20,7 +20,7 @@ export const TutorialForm = ({
   );
 
   return (
-    <form>
+    <form className={styles.form}>
       {/* <p> */}
       <input
         value={title}

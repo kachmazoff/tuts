@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BasePage } from "../components";
 import { CreateTutorialModule } from "../modules";
 
 export const CreateTutorialPage = () => {
   return (
-    <div>
-      <h1>Создание туториала</h1>
+    <BasePage title="Создание туториала">
       <div>
         <Link to="/">На главную</Link>
       </div>
       <CreateTutorialModule />
-    </div>
+    </BasePage>
   );
 };
