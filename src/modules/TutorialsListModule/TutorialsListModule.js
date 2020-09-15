@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getTutsList } from "./asyncActions";
+import { deleteTutorial, getTutsList } from "./asyncActions";
 import { TutorialsList } from "../../components";
 
 const mapStateToProps = ({ tutorialsList }) => ({
@@ -11,9 +11,16 @@ const mapStateToProps = ({ tutorialsList }) => ({
 
 const mapDispatchToProps = {
   loadTutsList: getTutsList,
+  onDelete: deleteTutorial,
 };
 
-const TutorialListComponent = ({ tuts, error, isLoading, loadTutsList }) => {
+const TutorialListComponent = ({
+  tuts,
+  error,
+  isLoading,
+  loadTutsList,
+  onDelete,
+}) => {
   return (
     <div>
       <p>
@@ -21,7 +28,7 @@ const TutorialListComponent = ({ tuts, error, isLoading, loadTutsList }) => {
       </p>
       {!!error && <p>{error}</p>}
       {isLoading && <p>Загрузка</p>}
-      <TutorialsList tuts={tuts} />
+      <TutorialsList tuts={tuts} onDelete={onDelete} />
     </div>
   );
 };

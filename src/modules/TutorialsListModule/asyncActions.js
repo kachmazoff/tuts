@@ -9,9 +9,23 @@ export const getTutsList = () => (dispatch) => {
   return axios
     .get(API_TUTS_LIST)
     .then((response) => {
-      dispatch(onLoadComplete(response.data.results));
+      dispatch(onLoadComplete(response.data));
     })
     .catch(() => {
       dispatch(onLoadFail());
+    });
+};
+
+export const deleteTutorial = (tutorialId) => (dispatch) => {
+  const { onLoadStart, onLoadComplete, onLoadFail } = actions;
+
+  // dispatch(onLoadStart());
+  return axios
+    .delete(API_TUTS_LIST + `/${tutorialId}`)
+    .then((response) => {
+      dispatch(getTutsList());
+    })
+    .catch(() => {
+      // dispatch(onLoadFail());
     });
 };

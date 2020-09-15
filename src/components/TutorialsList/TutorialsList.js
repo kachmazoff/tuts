@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TutorialsList = ({ title, tuts }) => {
+export const TutorialsList = ({ title, tuts, onDelete }) => {
   return (
     <div>
       <h6>{title}</h6>
@@ -8,7 +8,10 @@ export const TutorialsList = ({ title, tuts }) => {
       {tuts.length > 0 && (
         <ul>
           {tuts.map((tutorial, index) => (
-            <li key={index}>{`tutorial#${index}`}</li>
+            <li key={index}>
+              {tutorial.title}
+              <button onClick={() => onDelete(tutorial.id)}>Удалить</button>
+            </li>
           ))}
         </ul>
       )}
