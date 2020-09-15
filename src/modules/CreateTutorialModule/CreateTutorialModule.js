@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { TutorialForm } from "../../components";
+import { TutorialForm, TutorialStepsFormList } from "../../components";
 import { actions, TOTAL_FORM_STEPS } from "./reducer";
 import { createTutorial } from "./asyncActions";
 
@@ -9,12 +9,15 @@ const mapStateToProps = ({ createTutorial }) => ({
   isLoading: createTutorial.isLoading,
   title: createTutorial.title,
   description: createTutorial.description,
+  steps: createTutorial.steps,
 });
 
 const mapDispatchToProps = {
   setTitle: actions.setTitle,
   setDescription: actions.setDescription,
   next: actions.incrementStep,
+  addNewStep: actions.addNewStep,
+  onChangeStep: actions.onChangeStep,
   submit: createTutorial,
 };
 
@@ -23,6 +26,10 @@ const CreateTutorialComponent = ({
   isLoading,
   title,
   description,
+  steps,
+  addNewStep,
+  onChangeStep,
+  onRemoveStep, // TODO
   setTitle,
   setDescription,
   next,
@@ -40,12 +47,20 @@ const CreateTutorialComponent = ({
       </h2>
 
       {creationStep === 0 && (
-        <TutorialForm
-          title={title}
-          description={description}
-          setTitle={setTitle}
-          setDescription={setDescription}
-        />
+        <>
+          <TutorialForm
+            title={title}
+            description={description}
+            setTitle={setTitle}
+            setDescription={setDescription}
+          />
+          <TutorialStepsFormList
+            steps={steps}
+            onChange={onChangeStep}
+            onRemove={onRemoveStep}
+          />
+          <button onClick={addNewStep}>Добавить шаг</button>
+        </>
       )}
 
       {creationStep >= 0 && (

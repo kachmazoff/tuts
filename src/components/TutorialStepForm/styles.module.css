@@ -1,0 +1,41 @@
+.form {
+    border: 2px solid #EAEAEA;
+    border-radius: 5px;
+    overflow: hidden;
+    /* transition: 0.1s; */
+}
+
+.form:focus-within {
+    border: 2px solid #4582FE;
+}
+
+.form_title {
+    padding: 5px 14px;
+    background-color: #EAEAEA;
+    color: #707070;
+}
+
+.form:focus-within .form_title {
+    background-color: #4582FE;
+    color: white;
+}
+
+.form input, .form textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 10px 0;
+    padding: 5px 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form textarea {
+    min-height: 70px;
+    height: 100px;
+    resize: vertical;
+}
+
+.form input {
+    font-weight: bold;
+}

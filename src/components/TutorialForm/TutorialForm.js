@@ -21,7 +21,6 @@ export const TutorialForm = ({
 
   return (
     <form className={styles.form}>
-      {/* <p> */}
       <input
         value={title}
         name="title"
@@ -29,8 +28,6 @@ export const TutorialForm = ({
         onChange={onChangeHandler}
         className={styles.title}
       />
-      {/* </p> */}
-      {/* <p> */}
       <textarea
         value={description}
         name="description"
@@ -38,7 +35,6 @@ export const TutorialForm = ({
         onChange={onChangeHandler}
         className={styles.description}
       />
-      {/* </p> */}
     </form>
   );
 };

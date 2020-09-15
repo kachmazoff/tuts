@@ -5,6 +5,7 @@ const initialState = {
   description: "",
   creationStep: 0,
   isLoading: false,
+  steps: [],
 };
 
 export const TOTAL_FORM_STEPS = 1;
@@ -44,6 +45,31 @@ export const createTutorialSlice = createSlice({
       ...state,
       isLoading: payload,
     }),
+    addNewStep: (state) => {
+      const stepsCopy = [...state.steps];
+      stepsCopy.push({
+        id: null,
+        title: "",
+        body: "",
+        index: stepsCopy.length + 1,
+      });
+
+      return {
+        ...state,
+        steps: stepsCopy,
+      };
+    },
+    onChangeStep: (state, { payload }) => {
+      const stepsCopy = [...state.steps];
+      stepsCopy[payload.index] = { ...stepsCopy[payload.index] };
+      stepsCopy[payload.index][payload.name] = payload.value;
+
+      console.log(payload);
+      return {
+        ...state,
+        steps: stepsCopy,
+      };
+    },
   },
 });
 

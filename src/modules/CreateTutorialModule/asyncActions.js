@@ -8,6 +8,7 @@ export const createTutorial = () => (dispatch, getState) => {
   const body = {
     title: createTutorial.title,
     description: createTutorial.description,
+    // steps: createTutorial.steps,
   };
 
   dispatch(setIsLoading(true));
@@ -16,6 +17,13 @@ export const createTutorial = () => (dispatch, getState) => {
     .then((response) => {
       dispatch(setIsLoading(false));
       dispatch(onComplete());
+      console.log(response);
+      axios
+        .post(
+          `${API_TUTS_LIST}/${response.data.id}/steps`,
+          createTutorial.steps
+        )
+        .then(() => console.log("YES"));
     })
     .catch(() => {
       dispatch(setIsLoading(false));

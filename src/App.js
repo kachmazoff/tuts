@@ -2,8 +2,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { store } from "./store";
-import { HomePage } from "./pages/HomePage";
-import { CreateTutorialPage } from "./pages/CreateTutorialPage";
+import { HomePage, CreateTutorialPage } from "./pages";
 import "./App.css";
 
 function App() {
