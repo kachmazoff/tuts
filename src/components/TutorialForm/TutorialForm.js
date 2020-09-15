@@ -20,12 +20,16 @@ export const TutorialForm = ({
 
   return (
     <form>
-      <input value={title} name="title" onChange={onChangeHandler} />
-      <textarea
-        value={description}
-        name="description"
-        onChange={onChangeHandler}
-      />
+      <p>
+        <input value={title} name="title" onChange={onChangeHandler} />
+      </p>
+      <p>
+        <textarea
+          value={description}
+          name="description"
+          onChange={onChangeHandler}
+        />
+      </p>
     </form>
   );
 };

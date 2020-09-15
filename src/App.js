@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { store } from "./store";
 import { HomePage } from "./pages/HomePage";
+import { CreateTutorialPage } from "./pages/CreateTutorialPage";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/tutorial/create" exact component={CreateTutorialPage} />
           <Route path="*">404 page</Route>
         </Switch>
       </BrowserRouter>
