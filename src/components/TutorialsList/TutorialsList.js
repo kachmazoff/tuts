@@ -1,4 +1,5 @@
 import React from "react";
+import { TutorialPreview } from "../TutorialPreview";
 
 export const TutorialsList = ({ title, tuts, onDelete }) => {
   return (
@@ -9,7 +10,7 @@ export const TutorialsList = ({ title, tuts, onDelete }) => {
         <ul>
           {tuts.map((tutorial, index) => (
             <li key={index}>
-              {tutorial.title}
+              <TutorialPreview tutorial={tutorial} />
               <button onClick={() => onDelete(tutorial.id)}>Удалить</button>
             </li>
           ))}

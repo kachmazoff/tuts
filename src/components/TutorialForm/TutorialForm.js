@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.css";
 
 export const TutorialForm = ({
   title,
@@ -20,16 +21,24 @@ export const TutorialForm = ({
 
   return (
     <form>
-      <p>
-        <input value={title} name="title" onChange={onChangeHandler} />
-      </p>
-      <p>
-        <textarea
-          value={description}
-          name="description"
-          onChange={onChangeHandler}
-        />
-      </p>
+      {/* <p> */}
+      <input
+        value={title}
+        name="title"
+        placeholder="Название"
+        onChange={onChangeHandler}
+        className={styles.title}
+      />
+      {/* </p> */}
+      {/* <p> */}
+      <textarea
+        value={description}
+        name="description"
+        placeholder="Описание"
+        onChange={onChangeHandler}
+        className={styles.description}
+      />
+      {/* </p> */}
     </form>
   );
 };

@@ -21,6 +21,10 @@ const TutorialListComponent = ({
   loadTutsList,
   onDelete,
 }) => {
+  React.useEffect(() => {
+    loadTutsList();
+  }, []);
+
   return (
     <div>
       <p>
