@@ -18,6 +18,7 @@ const mapDispatchToProps = {
   next: actions.incrementStep,
   addNewStep: actions.addNewStep,
   onChangeStep: actions.onChangeStep,
+  onStart: actions.onStart,
   submit: createTutorial,
 };
 
@@ -30,12 +31,16 @@ const CreateTutorialComponent = ({
   addNewStep,
   onChangeStep,
   onRemoveStep, // TODO
+  onStart,
   setTitle,
   setDescription,
   next,
   submit,
 }) => {
   const isLastStep = creationStep + 1 === TOTAL_FORM_STEPS;
+  React.useEffect(() => {
+    onStart();
+  }, []);
 
   return (
     <div>

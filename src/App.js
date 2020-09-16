@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { store } from "./store";
 import { HomePage, CreateTutorialPage } from "./pages";
 import "./App.css";
+import { TutorialPage } from "./pages/TutorialPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/tutorial/create" exact component={CreateTutorialPage} />
+          <Route path="/tutorial/:id" component={TutorialPage} />
           <Route path="*">404 page</Route>
         </Switch>
       </BrowserRouter>
