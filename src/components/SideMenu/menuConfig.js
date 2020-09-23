@@ -4,11 +4,15 @@ export const menu = [
     link: "/",
   },
   {
-    title: "Подписки",
+    title: "Создать тутор",
+    link: "/tutorial/create",
+  },
+  {
+    title: "Подписки(404)",
     link: "/subscriptions",
   },
   {
-    title: "Поиск",
+    title: "Поиск(404)",
     link: "/browse",
   },
 ];

@@ -21,13 +21,15 @@ export const TutorialForm = ({
 
   return (
     <form className={styles.form}>
-      <input
-        value={title}
-        name="title"
-        placeholder="Название"
-        onChange={onChangeHandler}
-        className={styles.title}
-      />
+      <label className={styles.title_label}>
+        Название
+        <input
+          value={title}
+          name="title"
+          onChange={onChangeHandler}
+          className={styles.title}
+        />
+      </label>
       <textarea
         value={description}
         name="description"

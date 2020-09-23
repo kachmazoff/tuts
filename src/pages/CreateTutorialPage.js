@@ -6,9 +6,6 @@ import { CreateTutorialModule } from "../modules";
 export const CreateTutorialPage = () => {
   return (
     <BasePage title="Создание туториала">
-      <div>
-        <Link to="/">На главную</Link>
-      </div>
       <CreateTutorialModule />
     </BasePage>
   );
