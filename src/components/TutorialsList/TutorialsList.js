@@ -1,22 +1,24 @@
 import React from "react";
-import { TutorialPreview } from "../TutorialPreview";
-import styles from "./styles.module.css";
+import { TutorialsRow } from "./TutorialsRow";
 
-export const TutorialsList = ({ title, tuts, onDelete }) => {
+export const TutorialsList = ({ title, tuts, onDelete, tutsOnRow = 3 }) => {
+  let rows = []; //массив в который будет выведен результат.
+  for (let i = 0; i < Math.ceil(tuts.length / tutsOnRow); i++) {
+    rows.push(tuts.slice(i * tutsOnRow, i * tutsOnRow + tutsOnRow));
+  }
+
   return (
-    <div className={styles.wrapper}>
+    <div>
       <h6>{title}</h6>
       {tuts.length === 0 && <p>Пусто</p>}
-      {tuts.length > 0 && (
-        <ul>
-          {tuts.map((tutorial, index) => (
-            <li key={index}>
-              <TutorialPreview tutorial={tutorial} />
-              <button onClick={() => onDelete(tutorial.id)}>Удалить</button>
-            </li>
-          ))}
-        </ul>
-      )}
+      {rows.map((row, index) => (
+        <TutorialsRow
+          tuts={row}
+          key={index}
+          onDelete={onDelete}
+          rowMax={tutsOnRow}
+        />
+      ))}
     </div>
   );
 };

@@ -1,16 +1,16 @@
-.wrapper li {
+ul.tuts li {
     list-style: none;
 }
 
-.wrapper ul {
+ul.tuts {
     display: flex;
     padding: 0;
 }
 
-.wrapper li:not(:first-child) {
+ul.tuts li:not(:first-child) {
     margin-left: 10px;
 }
 
-.wrapper li:not(:last-child) {
+ul.tuts li:not(:last-child) {
     margin-right: 10px;
 }
