@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { store } from "./store";
+import { HomePage, CreateTutorialPage, NotFoundPage } from "./pages";
+import "./App.css";
+import { TutorialPage } from "./pages/TutorialPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/tutorial/create" exact component={CreateTutorialPage} />
+          <Route path="/tutorial/:id" component={TutorialPage} />
+          <Route path="*" component={NotFoundPage} />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

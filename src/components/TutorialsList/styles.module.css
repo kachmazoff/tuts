@@ -1,0 +1,16 @@
+ul.tuts li {
+    list-style: none;
+}
+
+ul.tuts {
+    display: flex;
+    padding: 0;
+}
+
+ul.tuts li:not(:first-child) {
+    margin-left: 10px;
+}
+
+ul.tuts li:not(:last-child) {
+    margin-right: 10px;
+}

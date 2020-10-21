@@ -1,2 +1,2 @@
-export { TutorialsListModule } from "./TutorialsListModule";
+export { createTutorialSlice } from "./reducer";
 export { CreateTutorialModule } from "./CreateTutorialModule";
