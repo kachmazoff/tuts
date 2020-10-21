@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { menu } from "./menuConfig";
 import styles from "./styles.module.css";
 
-export const SideMenu = ({}) => (
+export const Menu = ({}) => (
   <div className={styles.wrapper}>
     <ul>
       {menu.map((x) => (
