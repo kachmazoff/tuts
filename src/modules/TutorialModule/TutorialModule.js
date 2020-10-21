@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Tutorial } from "../../components";
 import { getTututorial } from "./asyncActions";
 
 const mapStateToProps = ({ tutorial }) => ({
@@ -36,21 +37,11 @@ const TutorialComponent = ({
 
   // TODO: Вынести в отдельный компонент
   return (
-    <div>
-      <h2>{tutorial.title}</h2>
-      <p>{tutorial.description}</p>
-      {steps.length === 0 && <p>Нет ни одного шага(</p>}
-      {steps.length > 0 && (
-        <ol>
-          {steps.map((step) => (
-            <li key={`${step.id}_${step.index}`}>
-              <h3>{step.title}</h3>
-              <p>{step.body}</p>
-            </li>
-          ))}
-        </ol>
-      )}
-    </div>
+    <Tutorial
+      title={tutorial.title}
+      description={tutorial.description}
+      steps={steps}
+    />
   );
 };
 
