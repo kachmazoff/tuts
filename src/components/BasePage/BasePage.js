@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 export const BasePage = ({ title, children }) => {
   return (
     <div className={styles.wrapper}>
-      <SideMenu />
+      {/* <SideMenu /> */}
       <h1>{title}</h1>
       <main>{children}</main>
     </div>

@@ -22,7 +22,9 @@ const TutorialListComponent = ({
   onDelete,
 }) => {
   React.useEffect(() => {
-    loadTutsList();
+    if (!tuts || tuts.length === 0) {
+      loadTutsList();
+    }
   }, []);
 
   return (

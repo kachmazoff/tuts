@@ -3,5 +3,10 @@
 }
 
 .wrapper main, .wrapper h1 {
-    margin-left: 240px;
+    /* margin-left: 240px; */
+}
+
+.wrapper>main {
+    margin: 0 auto;
+    max-width: 1000px;
 }

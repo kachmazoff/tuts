@@ -1,0 +1,30 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 900px;
+    /* background-color: green; */
+}
+
+.step_wrapper {
+    background-color: white;
+    padding: 20px 10px;
+}
+
+.step_wrapper>h3 {
+    margin-top: 0;
+}
+
+.step_wrapper>p {
+    margin-bottom: 0;
+}
+
+.step_wrapper:not(:first-child) {
+    margin-top: 10px;
+}
+
+.step_wrapper:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+span.index_number {
+    color: #4582FE;
+}
