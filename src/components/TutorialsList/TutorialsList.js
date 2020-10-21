@@ -1,9 +1,10 @@
 import React from "react";
 import { TutorialPreview } from "../TutorialPreview";
+import styles from "./styles.module.css";
 
 export const TutorialsList = ({ title, tuts, onDelete }) => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <h6>{title}</h6>
       {tuts.length === 0 && <p>Пусто</p>}
       {tuts.length > 0 && (

@@ -1,0 +1,16 @@
+.wrapper li {
+    list-style: none;
+}
+
+.wrapper ul {
+    display: flex;
+    padding: 0;
+}
+
+.wrapper li:not(:first-child) {
+    margin-left: 10px;
+}
+
+.wrapper li:not(:last-child) {
+    margin-right: 10px;
+}

@@ -34,6 +34,7 @@ const TutorialComponent = ({
     return <h2>{`Ошибка ${error}`}</h2>;
   }
 
+  // TODO: Вынести в отдельный компонент
   return (
     <div>
       <h2>{tutorial.title}</h2>
