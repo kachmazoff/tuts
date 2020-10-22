@@ -2,9 +2,6 @@
     display: flex;
 }
 
-.wrapper>div {
-}
-
 .course_item {
     background-color: gray;
     width: 20%;

@@ -1,17 +1,18 @@
-.wrapper {
-    /* padding: 10px 20px; */
-}
-
-.wrapper main, .wrapper h1 {
-    /* margin-left: 240px; */
-}
-
 .wrapper>main {
     margin: 0 auto;
-    /* max-width: 1066px; */
+    width: 100%;
 }
 
 .wrapper>h1 {
     text-align: center;
     margin-bottom: 3rem;
+}
+
+.content {
+    display: flex;
+}
+
+.content>div {
+    width: 100px;
+    background-color: green;
 }

@@ -9,7 +9,7 @@ export const HomePage = () => {
       <div>
         <LinkButton to="/tutorial/create">Создать</LinkButton>
       </div>
-      <Courses count={6} />
+      <Courses count={5} />
       <TutorialsListModule />
     </BasePage>
   );
