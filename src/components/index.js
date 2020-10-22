@@ -4,3 +4,5 @@ export { BasePage } from "./BasePage";
 export { TutorialStepsFormList } from "./TutorialStepsFormList";
 export { LinkButton } from "./LinkButton";
 export { Tutorial } from "./Tutorial";
+export { Courses } from "./Courses";
+export { Container } from "./Container";

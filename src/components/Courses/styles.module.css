@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+}
+
+.wrapper>div {
+}
+
+.course_item {
+    background-color: gray;
+    width: 20%;
+    cursor: pointer;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course_item:hover {
+    background-color: aqua;
+}
