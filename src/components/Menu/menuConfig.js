@@ -15,4 +15,8 @@ export const menu = [
     title: "Поиск(404)",
     link: "/browse",
   },
+  {
+    title: "Аккаунт",
+    link: "/account",
+  },
 ];

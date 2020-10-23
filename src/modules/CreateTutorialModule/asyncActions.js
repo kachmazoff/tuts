@@ -1,6 +1,6 @@
-import axios from "axios";
+import { axios } from "../../utils/customAxios";
+import { API_TUTS_LIST } from "../../config/apiEndpoints";
 import { actions } from "./reducer";
-import { API_TUTS_LIST } from "../../utils/api";
 
 export const createTutorial = () => (dispatch, getState) => {
   const { onComplete, onFail, setIsLoading } = actions;
