@@ -14,3 +14,8 @@ ul.tuts li:not(:first-child) {
 ul.tuts li:not(:last-child) {
     margin-right: 10px;
 }
+
+.title {
+    font-size: 1rem;
+    margin: 0;
+}
