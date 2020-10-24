@@ -16,7 +16,11 @@ export const menu = [
     link: "/browse",
   },
   {
-    title: "Аккаунт",
+    title: "Войти",
+    link: "/signin",
+  },
+  {
+    title: "Профиль",
     link: "/account",
   },
 ];
