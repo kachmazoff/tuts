@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 
 export const Menu = ({}) => (
   <div className={styles.wrapper}>
+    <span className={styles.logo}>Tuts</span>
     <ul>
       {menu.map((x) => (
         <li key={x.link}>

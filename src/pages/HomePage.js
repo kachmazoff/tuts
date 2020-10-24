@@ -5,9 +5,6 @@ import { TutorialsListModule } from "../modules";
 export const HomePage = () => {
   return (
     <BasePage title="Главная">
-      <div>
-        <LinkButton to="/tutorial/create">Создать</LinkButton>
-      </div>
       <Courses count={5} />
       <TutorialsListModule />
     </BasePage>
