@@ -1,5 +1,6 @@
 import React from "react";
 import { TutorialsRow } from "./TutorialsRow";
+import styles from "./styles.module.css";
 
 export const TutorialsList = ({ title, tuts, onDelete, tutsOnRow = 3 }) => {
   let rows = []; //массив в который будет выведен результат.
@@ -9,7 +10,7 @@ export const TutorialsList = ({ title, tuts, onDelete, tutsOnRow = 3 }) => {
 
   return (
     <div>
-      <h6>{title}</h6>
+      <h6 className={styles.title}>{title}</h6>
       {tuts.length === 0 && <p>Пусто</p>}
       {rows.map((row, index) => (
         <TutorialsRow

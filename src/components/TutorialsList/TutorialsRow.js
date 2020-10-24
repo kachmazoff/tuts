@@ -9,7 +9,7 @@ export const TutorialsRow = ({ tuts, onDelete, rowMax }) => {
       {tuts.map((tutorial, index) => (
         <li key={index} style={{ width: liWidth }}>
           <TutorialPreview tutorial={tutorial} />
-          <button onClick={() => onDelete(tutorial.id)}>Удалить</button>
+          {/* <button onClick={() => onDelete(tutorial.id)}>Удалить</button> */}
         </li>
       ))}
       {tuts.length < rowMax &&

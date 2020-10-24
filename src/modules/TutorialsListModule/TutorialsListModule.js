@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { deleteTutorial, getTutsList } from "./asyncActions";
-import { TutorialsList } from "../../components";
+import { Container, TutorialsList } from "../../components";
 
 const mapStateToProps = ({ tutorialsList }) => ({
   tuts: tutorialsList.tuts,
@@ -28,14 +28,14 @@ const TutorialListComponent = ({
   }, []);
 
   return (
-    <div>
+    <Container>
       <p>
         <button onClick={loadTutsList}>Refresh</button>
       </p>
       {!!error && <p>{error}</p>}
       {isLoading && <p>Загрузка</p>}
-      <TutorialsList tuts={tuts} onDelete={onDelete} />
-    </div>
+      <TutorialsList tuts={tuts} onDelete={onDelete} tutsOnRow={3} />
+    </Container>
   );
 };
 

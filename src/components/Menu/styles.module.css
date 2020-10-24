@@ -1,18 +1,39 @@
 .wrapper {
-    /* position: fixed;
-    top: 0;
-    left: 0; */
-    /* height: 100vh; */
-    /* width: 300px; */
+    position: sticky;
     background: white;
-    padding: 5px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
 }
 
 .wrapper li {
     list-style: none;
+    margin: 0 10px;
 }
 
 .wrapper>ul {
     display: flex;
     justify-content: space-evenly;
+}
+
+.link {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+.link__active, .link:hover {
+    background-color: #14213d;
+    color: white;
+}
+
+.logo {
+    color: #4582FE;
+    font-weight: bold;
+    font-size: 2rem;
+
+    text-transform: uppercase;
 }

@@ -1,14 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { menu } from "./menuConfig";
 import styles from "./styles.module.css";
 
 export const Menu = ({}) => (
   <div className={styles.wrapper}>
+    <span className={styles.logo}>Tuts</span>
     <ul>
       {menu.map((x) => (
         <li key={x.link}>
-          <Link to={x.link}>{x.title}</Link>
+          <NavLink
+            to={x.link}
+            className={styles.link}
+            activeClassName={styles.link__active}
+            exact
+          >
+            {x.title}
+          </NavLink>
         </li>
       ))}
     </ul>
