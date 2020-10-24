@@ -15,7 +15,13 @@ const LoginComponent = ({ login }) => {
   return (
     <div>
       {/* <RegistrationForm onSubmit={console.log} /> */}
-      <LoginForm onSubmit={(data) => login(data.username, data.password)} />
+      <LoginForm
+        onSubmit={(data) =>
+          login(data.username, data.password).then(
+            (document.location.href = "/")
+          )
+        }
+      />
     </div>
   );
 };
