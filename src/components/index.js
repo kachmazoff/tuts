@@ -8,3 +8,4 @@ export { Courses } from "./Courses";
 export { Container } from "./Container";
 export { RegistrationForm } from "./RegistrationForm";
 export { LoginForm } from "./LoginForm";
+export { UserCard } from "./UserCard";
