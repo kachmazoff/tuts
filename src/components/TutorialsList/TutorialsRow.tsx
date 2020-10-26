@@ -1,8 +1,14 @@
 import React from "react";
+import { TutorialPreviewModel } from "../../types";
 import { TutorialPreview } from "../TutorialPreview";
 import styles from "./styles.module.css";
 
-export const TutorialsRow = ({ tuts, onDelete, rowMax }) => {
+export type TutorialRowProps = {
+  tuts: TutorialPreviewModel[];
+  rowMax: number;
+};
+
+export const TutorialsRow = ({ tuts, rowMax }: TutorialRowProps) => {
   const liWidth = 100 / rowMax + "%";
   return (
     <ul className={styles.tuts}>

@@ -5,11 +5,13 @@
     "ecmaVersion": 2018
   },
   "extends": [
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended"
   ],
   "rules": {
     "prettier/prettier": "error",
+    "@typescript-eslint/explicit-module-boundary-types": 0,
     "react/prop-types": 0
   },
   "env": {
