@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { TutorialPreviewModel } from "../../types";
 import styles from "./styles.module.css";
 
-export const TutorialPreview = ({ tutorial }) => {
+export type TutorialPreviewProps = {
+  tutorial: TutorialPreviewModel;
+};
+
+export const TutorialPreview = ({ tutorial }: TutorialPreviewProps) => {
   const { title, description, author } = tutorial;
   return (
     <Link to={`/tutorial/${tutorial.id}`} className={styles.link}>
