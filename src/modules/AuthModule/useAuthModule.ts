@@ -9,7 +9,7 @@ export const useAuthModule = (): void => {
   const dispatch = useDispatch();
   const authState: AuthState = useSelector(authDataSelector);
 
-  if (authState.status == CheckState.initiated) {
+  if (authState.status === CheckState.initiated) {
     dispatch(tryLoadUserSession());
   }
 };

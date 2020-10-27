@@ -19,7 +19,7 @@ export const AccessCheckerComponent: FC<Props> = ({
   children,
   status,
   onlyUnauthorized,
-  redirectPath = "/login",
+  redirectPath = "/signin",
 }) => {
   useAuthModule();
 

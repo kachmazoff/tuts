@@ -32,6 +32,10 @@ export const authSlice = createSlice({
       status: CheckState.failed,
       username: undefined,
     }),
+    setStatus: (state, { payload }: PayloadAction<CheckState>) => ({
+      ...state,
+      status: payload,
+    }),
   },
 });
 

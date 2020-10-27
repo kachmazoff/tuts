@@ -1,6 +1,6 @@
 import { axios } from "../../utils/customAxios";
 import { API_LOGIN } from "../../config/apiEndpoints";
-import { actions } from "./reducer";
+import { actions, CheckState } from "./reducer";
 import { deleteToken, loadToken, saveToken } from "./helpers";
 
 export const login = (username, password) => (dispatch, getState) => {
@@ -36,7 +36,11 @@ export const logout = () => (dispatch, getState) => {
 export const tryLoadUserSession = () => (dispatch, getState) => {
   loadToken().then((token) => {
     if (!!token) {
-      dispatch(actions.login());
+      console.log("get token");
+      // dispatch(actions.login());
+      dispatch(actions.setStatus(CheckState.succeed));
+    } else {
+      dispatch(actions.setStatus(CheckState.failed));
     }
   });
 };

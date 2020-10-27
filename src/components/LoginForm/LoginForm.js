@@ -28,7 +28,7 @@ export const LoginForm = ({ onSubmit }) => {
         type="password"
         value={password}
         onChange={(event) => setPassword(event.target.value)}
-        autoComplete={false}
+        autoComplete="off"
       />
       <br />
       <button
