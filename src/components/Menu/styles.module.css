@@ -1,11 +1,16 @@
 .wrapper {
     position: sticky;
+    top: 0;
     background: white;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 50px;
+    z-index: 999;
+
+    /* border-bottom: 1px solid #80808056; */
+    border-bottom: 1px solid #8080806c;
 }
 
 .wrapper li {

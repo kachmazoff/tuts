@@ -1,0 +1,22 @@
+.tutorial_item {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #8080802b;
+}
+
+.tutorial_item>* {
+    margin: 0;
+}
+
+.tutorial_item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.description {
+    color: grey;
+}
+
+.description:not(:last-child) {
+    padding-bottom: 10px;
+}
