@@ -8,7 +8,7 @@ export const TutorialStep = ({ step, indexNumber }) => {
         <span className={styles.index_number}>{`Шаг ${indexNumber}. `}</span>
         {`${step.title}`}
       </h3>
-      <p>{step.body}</p>
+      <p className={styles.body_text}>{step.body}</p>
     </div>
   );
 };
