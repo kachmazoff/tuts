@@ -11,11 +11,13 @@ import {
 } from "./pages";
 import "./App.css";
 import { TutorialPage } from "./pages/TutorialPage";
+import { MenuModule } from "./modules/MenuModule/MenuModule";
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
+        <MenuModule />
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/account" component={AccountPage} />

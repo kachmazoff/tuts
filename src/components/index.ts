@@ -9,3 +9,4 @@ export { Container } from "./Container";
 export { RegistrationForm } from "./RegistrationForm";
 export { LoginForm } from "./LoginForm";
 export { UserCard } from "./UserCard";
+export { Menu } from "./Menu";
