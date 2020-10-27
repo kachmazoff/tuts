@@ -11,4 +11,5 @@ export type TutorialPreviewModel = {
   isPublic: boolean;
   stepsCount: number;
   author: UserModel;
+  created: string;
 };
