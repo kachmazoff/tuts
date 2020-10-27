@@ -1,14 +1,14 @@
 import React from "react";
 import { BasePage } from "../components";
 import { CreateTutorialModule } from "../modules";
-import { AccessChecker } from "../modules/AuthModule/AccessChecker";
+import { authorizedOnlyHOC } from "../modules/AuthModule";
 
-export const CreateTutorialPage = () => {
+export const CreateTutorialPageBase = () => {
   return (
     <BasePage title="Создание туториала">
-      <AccessChecker redirectPath="/signin">
-        <CreateTutorialModule />
-      </AccessChecker>
+      <CreateTutorialModule />
     </BasePage>
   );
 };
+
+export const CreateTutorialPage = authorizedOnlyHOC(CreateTutorialPageBase);
