@@ -1,7 +1,7 @@
 import { axios } from "../../utils/customAxios";
 import { API_LOGIN } from "../../config/apiEndpoints";
 import { actions } from "./reducer";
-import { deleteToken, saveToken } from "./helpers";
+import { deleteToken, loadToken, saveToken } from "./helpers";
 
 export const login = (username, password) => (dispatch, getState) => {
   const { login: loginAction } = actions;
@@ -31,4 +31,12 @@ export const logout = () => (dispatch, getState) => {
   deleteToken();
   axios.clearAuthorizationHeader();
   dispatch(logoutAction());
+};
+
+export const tryLoadUserSession = () => (dispatch, getState) => {
+  loadToken().then((token) => {
+    if (!!token) {
+      dispatch(actions.login());
+    }
+  });
 };

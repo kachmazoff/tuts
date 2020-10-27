@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { BasePage } from "../components";
 import { CreateTutorialModule } from "../modules";
+import { AccessChecker } from "../modules/AuthModule/AccessChecker";
 
 export const CreateTutorialPage = () => {
   return (
     <BasePage title="Создание туториала">
-      <CreateTutorialModule />
+      <AccessChecker redirectPath="/signin">
+        <CreateTutorialModule />
+      </AccessChecker>
     </BasePage>
   );
 };
