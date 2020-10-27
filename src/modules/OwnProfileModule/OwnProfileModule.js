@@ -21,7 +21,14 @@ const OwnProfileComponent = ({ data, username, loadData, logout }) => {
       <p>{`Пользователь: ${username}`}</p>
       <p>{JSON.stringify(data)}</p>
       <button onClick={loadData}>Загрузить данные</button>
-      <button onClick={logout}>Выйти</button>
+      <button
+        onClick={() => {
+          logout();
+          document.location.href = "/";
+        }}
+      >
+        Выйти
+      </button>
     </Container>
   );
 };
