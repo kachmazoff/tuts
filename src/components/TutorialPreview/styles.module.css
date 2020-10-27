@@ -2,7 +2,7 @@
     position: relative;
     align-items: center;
     background-color: #fff;
-    border: 1px solid grey;
+    border: 1px solid #8080802b;
     border-radius: 8px;
     box-sizing: border-box;
     display: flex;
@@ -34,7 +34,8 @@
 
 .wrapper:hover {
     background-color: #fff;
-    border-color: #4582fe;
+    /* border-color: #4582fe; */
+    border-color: #8080805c;
     /* border-width: 2px; */
 }
 

@@ -1,5 +1,5 @@
 .wrapper>main {
-    margin: 0 auto;
+    margin: 0 auto 50px;
     width: 100%;
 }
 
@@ -14,5 +14,4 @@
 
 .content>div {
     width: 100px;
-    background-color: green;
 }

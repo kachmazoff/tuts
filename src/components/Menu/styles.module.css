@@ -1,11 +1,16 @@
 .wrapper {
     position: sticky;
+    top: 0;
     background: white;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 50px;
+    z-index: 999;
+
+    /* border-bottom: 1px solid #80808056; */
+    border-bottom: 1px solid #8080806c;
 }
 
 .wrapper li {
@@ -22,12 +27,14 @@
     padding: 10px;
     color: black;
     text-decoration: none;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .link__active, .link:hover {
-    background-color: #14213d;
+    /* background-color: #14213d; */
+    background-color: #4582fe;
     color: white;
+    /* color: #4582fe; */
 }
 
 .logo {
@@ -36,4 +43,5 @@
     font-size: 2rem;
 
     text-transform: uppercase;
+    text-decoration: none;
 }

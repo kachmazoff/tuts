@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 export type MenuItem = {
@@ -14,7 +14,9 @@ export type MenuProps = {
 
 export const Menu = ({ items }: MenuProps) => (
   <div className={styles.wrapper}>
-    <span className={styles.logo}>Tuts</span>
+    <Link to="/" className={styles.logo}>
+      Tuts
+    </Link>
     <ul>
       {items.map((x) => (
         <li key={x.link}>

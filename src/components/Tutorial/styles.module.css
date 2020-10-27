@@ -27,3 +27,9 @@
 span.index_number {
     color: #4582FE;
 }
+
+.step_wrapper .body_text {
+    text-indent: 1.25rem;
+    /* Свойство для выравнивания текста по ширине: */
+    /* text-align: justify; */ 
+}
