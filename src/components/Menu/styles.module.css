@@ -27,12 +27,14 @@
     padding: 10px;
     color: black;
     text-decoration: none;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .link__active, .link:hover {
-    background-color: #14213d;
+    /* background-color: #14213d; */
+    background-color: #4582fe;
     color: white;
+    /* color: #4582fe; */
 }
 
 .logo {
