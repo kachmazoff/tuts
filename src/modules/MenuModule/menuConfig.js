@@ -6,10 +6,12 @@ export const menu = [
   {
     title: "Создать тутор",
     link: "/tutorial/create",
+    authStatus: "success",
   },
   {
     title: "Подписки(404)",
     link: "/subscriptions",
+    authStatus: "success",
   },
   {
     title: "Поиск(404)",
@@ -18,9 +20,11 @@ export const menu = [
   {
     title: "Войти",
     link: "/signin",
+    authStatus: "failed",
   },
   {
     title: "Профиль",
     link: "/account",
+    authStatus: "success",
   },
 ];
