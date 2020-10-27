@@ -1,8 +1,8 @@
 export const menu = [
-  {
-    title: "Главная",
-    link: "/",
-  },
+  // {
+  //   title: "Главная",
+  //   link: "/",
+  // },
   {
     title: "Создать тутор",
     link: "/tutorial/create",
