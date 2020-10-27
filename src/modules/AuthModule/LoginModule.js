@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { LoginForm, RegistrationForm } from "../../components";
+import { LoginForm } from "../../components";
 import { login } from "./asyncActions";
 
 const mapStateToProps = ({ auth }) => ({
@@ -14,12 +14,11 @@ const mapDispatchToProps = {
 const LoginComponent = ({ login }) => {
   return (
     <div>
-      {/* <RegistrationForm onSubmit={console.log} /> */}
       <LoginForm
         onSubmit={(data) =>
-          login(data.username, data.password).then(
-            (document.location.href = "/")
-          )
+          login(data.username, data.password).then(() => {
+            document.location.href = "/";
+          })
         }
       />
     </div>
