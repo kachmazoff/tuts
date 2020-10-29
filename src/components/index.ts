@@ -12,3 +12,4 @@ export { UserCard } from "./UserCard";
 export { Menu } from "./Menu";
 export { Tutorials } from "./Tutorials";
 export { ProfileHeader } from "./ProfileHeader";
+export { ProfileForm } from "./ProfileForm";

@@ -8,9 +8,10 @@ import {
   NotFoundPage,
   AccountPage,
   SigninPage,
+  EditProfilePage,
+  TutorialPage,
 } from "./pages";
 import "./App.css";
-import { TutorialPage } from "./pages/TutorialPage";
 import { MenuModule } from "./modules/MenuModule/MenuModule";
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
         <MenuModule />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/account" component={AccountPage} />
+          <Route path="/account" exact component={AccountPage} />
+          <Route path="/account/edit" component={EditProfilePage} />
           <Route path="/signin" component={SigninPage} />
           <Route path="/tutorial/create" exact component={CreateTutorialPage} />
           <Route path="/tutorial/:id" component={TutorialPage} />

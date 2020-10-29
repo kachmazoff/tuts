@@ -26,3 +26,7 @@
     color: grey;
     margin-top: 0;
 }
+
+.edit_button {
+    cursor: pointer;
+}
