@@ -64,7 +64,6 @@ export const createTutorialSlice = createSlice({
       stepsCopy[payload.index] = { ...stepsCopy[payload.index] };
       stepsCopy[payload.index][payload.name] = payload.value;
 
-      console.log(payload);
       return {
         ...state,
         steps: stepsCopy,

@@ -10,7 +10,6 @@ export const deleteToken = async () => {
 
 export const loadToken = async () => {
   const token = await localStorage.getItem(TOKEN);
-  console.log("token", token);
   return token;
 };
 

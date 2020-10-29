@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ProfileForm = ({ initialData, onSubmit }) => {
+export const ProfileForm = ({ initialData, onSubmit, disabled }) => {
   const [formData, setFormData] = React.useState(initialData || {});
 
   React.useEffect(() => {
@@ -16,7 +16,6 @@ export const ProfileForm = ({ initialData, onSubmit }) => {
     }));
   }, []);
 
-  console.log(formData);
   return (
     <div>
       <form
@@ -30,20 +29,25 @@ export const ProfileForm = ({ initialData, onSubmit }) => {
           placeholder="Имя"
           value={formData["firstName"]}
           onChange={onChangeHandler}
+          disabled={disabled}
         />
         <input
-          name="secondName"
+          name="lastName"
           placeholder="Фамилия"
-          value={formData["secondName"]}
+          value={formData["lastName"]}
           onChange={onChangeHandler}
+          disabled={disabled}
         />
         <input
           name="patronymic"
           placeholder="Отчество"
           value={formData["patronymic"]}
           onChange={onChangeHandler}
+          disabled={disabled}
         />
-        <button type="submit">Сохранить</button>
+        <button type="submit" disabled={disabled}>
+          Сохранить
+        </button>
       </form>
     </div>
   );

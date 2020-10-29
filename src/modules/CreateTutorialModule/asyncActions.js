@@ -17,7 +17,6 @@ export const createTutorial = () => (dispatch, getState) => {
     .then((response) => {
       dispatch(setIsLoading(false));
       dispatch(onComplete());
-      console.log(response);
       axios
         .post(
           `${API_TUTS_LIST}/${response.data.id}/steps`,

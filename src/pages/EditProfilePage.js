@@ -1,11 +1,12 @@
 import React from "react";
-import { BasePage, ProfileForm } from "../components";
+import { BasePage } from "../components";
 import { authorizedOnlyHOC } from "../modules/AuthModule";
+import { EditProfileModule } from "../modules/OwnProfileModule";
 
 export const EditProfilePageBase = () => {
   return (
     <BasePage title="Редактирование профиля">
-      <ProfileForm onSubmit={console.log} />
+      <EditProfileModule />
     </BasePage>
   );
 };
