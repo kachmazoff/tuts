@@ -22,7 +22,6 @@ const TutorialComponent = ({
   loadData,
   tutorialId,
 }) => {
-  console.log("tutorialId", tutorialId);
   React.useEffect(() => {
     if (!!tutorialId) loadData(tutorialId);
   }, [tutorialId]);

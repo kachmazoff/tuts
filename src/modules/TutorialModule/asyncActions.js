@@ -4,7 +4,6 @@ import { actions } from "./reducer";
 
 export const getTututorial = (tutorialId) => (dispatch) => {
   const { onLoadStart, onLoadComplete, onLoadFail, setTutorial } = actions;
-  console.log("tutorialId getTut", tutorialId);
   dispatch(onLoadStart());
   return axios
     .get(`${API_TUTS_LIST}/${tutorialId}`)

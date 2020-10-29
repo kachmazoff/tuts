@@ -36,7 +36,6 @@ export const logout = () => (dispatch, getState) => {
 export const tryLoadUserSession = () => (dispatch, getState) => {
   loadToken().then((token) => {
     if (!!token) {
-      console.log("get token");
       // dispatch(actions.login());
       dispatch(actions.setStatus(CheckState.succeed));
     } else {
