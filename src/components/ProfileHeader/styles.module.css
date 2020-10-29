@@ -1,0 +1,28 @@
+.wrapper {
+    background: white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #8080802b;
+}
+
+.avatar {
+    height: 200px;
+    background: #4582fe;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.fio {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+.username {
+    text-align: center;
+    color: grey;
+    margin-top: 0;
+}
