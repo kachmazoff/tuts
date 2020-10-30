@@ -44,12 +44,12 @@ const CreateTutorialComponent = ({
 
   return (
     <div>
-      <h2>
-        {/* {creationStep >= 0 && `Шаг ${creationStep + 1}`} */}
+      {/* {creationStep >= 0 && `Шаг ${creationStep + 1}`} */}
+      {/* <h2>
         {creationStep === -1 && "Туториал успешно создан"}
         {creationStep === -2 && "Ошибка..."}
         {isLoading && <span>Загрузка..</span>}
-      </h2>
+      </h2> */}
 
       {creationStep === 0 && (
         <>
