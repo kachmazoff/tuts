@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "../Container";
 import styles from "./styles.module.css";
 
 export const ProfileForm = ({ initialData, onSubmit, disabled, onCancel }) => {
@@ -18,7 +19,7 @@ export const ProfileForm = ({ initialData, onSubmit, disabled, onCancel }) => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <Container className={styles.wrapper}>
       <h2 className={styles.title}>Редактирование профиля</h2>
       <form
         className={styles.form}
@@ -78,6 +79,6 @@ export const ProfileForm = ({ initialData, onSubmit, disabled, onCancel }) => {
           </button>
         </div>
       </form>
-    </div>
+    </Container>
   );
 };
