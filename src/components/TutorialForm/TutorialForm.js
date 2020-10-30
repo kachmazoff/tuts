@@ -21,24 +21,29 @@ export const TutorialForm = ({
   );
 
   return (
-    <Container>
+    <Container className={styles.wrapper}>
+      <h2 className={styles.title}>Создание туториала</h2>
       <form className={styles.form}>
-        <label className={styles.title_label}>
+        {/* TODO: нормальный spacing */}
+        <label style={{ marginBottom: "0.6rem" }}>
           Название
           <input
             value={title}
             name="title"
+            placeholder="Как приготовить пиццу за 10 простых шагов?"
             onChange={onChangeHandler}
-            className={styles.title}
           />
         </label>
-        <textarea
-          value={description}
-          name="description"
-          placeholder="Описание"
-          onChange={onChangeHandler}
-          className={styles.description}
-        />
+        <label>
+          Описание
+          <textarea
+            value={description}
+            name="description"
+            placeholder="Описание"
+            onChange={onChangeHandler}
+            className={styles.description}
+          />
+        </label>
       </form>
     </Container>
   );

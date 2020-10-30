@@ -1,33 +1,38 @@
-.form input, .form textarea {
-    border-radius: 5px;
-    border: 1px solid grey;
-    display: block;
-    width: 100%;
+.wrapper {
+    background: white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #8080802b;
+}
+
+.form input {
+    padding: 8px 12px;
     box-sizing: border-box;
 }
 
-.title {
-    margin-bottom: 20px;
-    /* font-size: 1.5rem; */
-    padding: 10px 20px;
+.form textarea { resize: none; }
 
-    /* display: inline; */
-    width: 100%;
-    margin-left: 10px;
-    height: 2rem;
-    border: none;
-    border-bottom: 1px solid grey;
-    border-radius: 0;
-}
+.title { margin-top: 0; }
+
 
 .description {
     height: 200px;
     padding: 10px;
 }
 
-.title_label {
+.form label {
     display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    color: grey;
+    flex-direction: column;
+}
+
+.input_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_row:not(:last-child) {
+    margin-bottom: 1rem;
 }

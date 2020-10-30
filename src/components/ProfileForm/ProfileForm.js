@@ -1,6 +1,8 @@
 import React from "react";
+import { Container } from "../Container";
+import styles from "./styles.module.css";
 
-export const ProfileForm = ({ initialData, onSubmit, disabled }) => {
+export const ProfileForm = ({ initialData, onSubmit, disabled, onCancel }) => {
   const [formData, setFormData] = React.useState(initialData || {});
 
   React.useEffect(() => {
@@ -17,38 +19,66 @@ export const ProfileForm = ({ initialData, onSubmit, disabled }) => {
   }, []);
 
   return (
-    <div>
+    <Container className={styles.wrapper}>
+      <h2 className={styles.title}>Редактирование профиля</h2>
       <form
+        className={styles.form}
         onSubmit={(event) => {
           event.preventDefault();
           onSubmit(formData);
         }}
       >
-        <input
-          name="firstName"
-          placeholder="Имя"
-          value={formData["firstName"]}
-          onChange={onChangeHandler}
-          disabled={disabled}
-        />
-        <input
-          name="lastName"
-          placeholder="Фамилия"
-          value={formData["lastName"]}
-          onChange={onChangeHandler}
-          disabled={disabled}
-        />
-        <input
-          name="patronymic"
-          placeholder="Отчество"
-          value={formData["patronymic"]}
-          onChange={onChangeHandler}
-          disabled={disabled}
-        />
-        <button type="submit" disabled={disabled}>
-          Сохранить
-        </button>
+        <div className={[styles.input_row, styles.input_row_3].join(" ")}>
+          <label>
+            Имя
+            <input
+              name="firstName"
+              placeholder="Иван"
+              value={formData["firstName"]}
+              onChange={onChangeHandler}
+              disabled={disabled}
+            />
+          </label>
+
+          <label>
+            Фамилия
+            <input
+              name="lastName"
+              placeholder="Иванов"
+              value={formData["lastName"]}
+              onChange={onChangeHandler}
+              disabled={disabled}
+            />
+          </label>
+          <label>
+            Отчество
+            <input
+              name="patronymic"
+              placeholder="Иванович"
+              value={formData["patronymic"]}
+              onChange={onChangeHandler}
+              disabled={disabled}
+            />
+          </label>
+        </div>
+
+        <div className={styles.form_footer}>
+          <button
+            type="submit"
+            disabled={disabled}
+            className={styles.submit_button}
+          >
+            Сохранить
+          </button>
+          <button
+            type="button"
+            className={styles.cancel_button}
+            onClick={onCancel}
+          >
+            Отменить
+          </button>
+        </div>
       </form>
-    </div>
+    </Container>
   );
 };
