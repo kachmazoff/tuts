@@ -1,12 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Container } from "../../components";
+import { Container, ProfileHeader } from "../../components";
 import { logout } from "../AuthModule/asyncActions";
 import { getProfileData } from "./asyncActions";
 
 const mapStateToProps = ({ ownProfile }) => ({
-  data: ownProfile,
-  username: ownProfile.username,
+  userData: ownProfile.data,
 });
 
 const mapDispatchToProps = {
@@ -14,13 +13,15 @@ const mapDispatchToProps = {
   logout,
 };
 
-const OwnProfileComponent = ({ data, username, loadData, logout }) => {
+const OwnProfileComponent = ({ userData, loadData, logout }) => {
+  React.useEffect(() => {
+    if (!userData) {
+      loadData();
+    }
+  }, []);
   return (
     <Container>
-      OwnProfile
-      <p>{`Пользователь: ${username}`}</p>
-      <p>{JSON.stringify(data)}</p>
-      <button onClick={loadData}>Загрузить данные</button>
+      {userData && <ProfileHeader userData={userData} />}
       <button
         onClick={() => {
           logout();
