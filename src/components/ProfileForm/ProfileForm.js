@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-export const ProfileForm = ({ initialData, onSubmit, disabled }) => {
+export const ProfileForm = ({ initialData, onSubmit, disabled, onCancel }) => {
   const [formData, setFormData] = React.useState(initialData || {});
 
   React.useEffect(() => {
@@ -68,6 +68,13 @@ export const ProfileForm = ({ initialData, onSubmit, disabled }) => {
             className={styles.submit_button}
           >
             Сохранить
+          </button>
+          <button
+            type="button"
+            className={styles.cancel_button}
+            onClick={onCancel}
+          >
+            Отменить
           </button>
         </div>
       </form>
