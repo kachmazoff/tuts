@@ -1,6 +1,9 @@
 export type UserModel = {
   id: number;
   username: string;
+  firstName: string;
+  lastName: string;
+  patronymic: string;
 };
 
 export type TutorialPreviewModel = {

@@ -1,4 +1,5 @@
 import React from "react";
+import { UserModel } from "../../types";
 import { Container } from "../Container";
 import { LinkButton } from "../LinkButton";
 import styles from "./styles.module.css";
@@ -7,7 +8,11 @@ import styles from "./styles.module.css";
 //      В конфиге будет указано, например, стоит ли рендерить fio или это будет скрытой информацией
 //      Либо передавать неполную модель и добавить дополнительные проверки на существование полей
 
-export const ProfileHeader = ({ userData }) => {
+export type ProfileHeaderProps = {
+  userData: UserModel;
+};
+
+export const ProfileHeader = ({ userData }: ProfileHeaderProps) => {
   return (
     <Container className={styles.wrapper}>
       <div className={styles.avatar}>Картинка</div>
