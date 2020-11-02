@@ -63,8 +63,8 @@ const CreateTutorialComponent = ({
             steps={steps}
             onChange={onChangeStep}
             onRemove={onRemoveStep}
+            onAdd={addNewStep}
           />
-          <button onClick={addNewStep}>Добавить шаг</button>
         </>
       )}
 
