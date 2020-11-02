@@ -16,10 +16,24 @@ export const TutorialStepForm = ({
     },
     [onChange, index]
   );
+
+  const onRemoveHandler = React.useCallback(() => {
+    onRemove(index);
+  }, [onRemove, index]);
+
   return (
     <Container className={styles.wrapper}>
       <form className={styles.form}>
-        <div className={styles.form_title}>{`Шаг ${index}`}</div>
+        <div className={styles.form_title}>
+          {`Шаг ${index + 1}`}
+          <button
+            className={styles.remove_button}
+            onClick={onRemoveHandler}
+            type="button"
+          >
+            Удалить
+          </button>
+        </div>
         <input
           name="title"
           value={model.title}

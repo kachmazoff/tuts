@@ -8,9 +8,9 @@ export const TutorialStepsFormList = ({ steps, onChange, onRemove, onAdd }) => {
     <div>
       {steps.map((step, index) => (
         <TutorialStepForm
-          key={index}
+          key={`${steps.length}#${index}`}
           model={step}
-          index={index + 1}
+          index={index}
           onChange={onChange}
           onRemove={onRemove}
         />

@@ -18,6 +18,7 @@ const mapDispatchToProps = {
   next: actions.incrementStep,
   addNewStep: actions.addNewStep,
   onChangeStep: actions.onChangeStep,
+  onRemoveStep: actions.removeStep,
   onStart: actions.onStart,
   submit: createTutorial,
 };
