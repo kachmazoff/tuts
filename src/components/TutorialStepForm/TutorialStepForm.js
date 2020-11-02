@@ -17,7 +17,7 @@ export const TutorialStepForm = ({
     [onChange, index]
   );
   return (
-    <Container>
+    <Container className={styles.wrapper}>
       <form className={styles.form}>
         <div className={styles.form_title}>{`Шаг ${index}`}</div>
         <input
