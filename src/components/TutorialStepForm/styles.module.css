@@ -1,3 +1,7 @@
+.wrapper {
+    padding-bottom: 20px;
+}
+
 .form {
     border: 2px solid #EAEAEA;
     border-radius: 5px;
@@ -13,6 +17,8 @@
     padding: 5px 14px;
     background-color: #EAEAEA;
     color: #707070;
+    display: flex;
+    justify-content: space-between;
 }
 
 .form:focus-within .form_title {
@@ -38,4 +44,19 @@
 
 .form input {
     font-weight: bold;
+}
+
+.remove_button {
+    cursor: pointer;
+    border: none;
+    color: red;
+    background: white;
+    border-radius: 4px;
+    padding: 2px 12px;
+    transition: 0.1s;
+}
+
+.remove_button:hover {
+    background: red;
+    color: white;
 }

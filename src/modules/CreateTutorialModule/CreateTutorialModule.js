@@ -18,6 +18,7 @@ const mapDispatchToProps = {
   next: actions.incrementStep,
   addNewStep: actions.addNewStep,
   onChangeStep: actions.onChangeStep,
+  onRemoveStep: actions.removeStep,
   onStart: actions.onStart,
   submit: createTutorial,
 };
@@ -63,8 +64,8 @@ const CreateTutorialComponent = ({
             steps={steps}
             onChange={onChangeStep}
             onRemove={onRemoveStep}
+            onAdd={addNewStep}
           />
-          <button onClick={addNewStep}>Добавить шаг</button>
         </>
       )}
 

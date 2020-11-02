@@ -59,6 +59,15 @@ export const createTutorialSlice = createSlice({
         steps: stepsCopy,
       };
     },
+    removeStep: (state, { payload }) => {
+      const stepsCopy = [...state.steps];
+      stepsCopy.splice(payload, 1);
+
+      return {
+        ...state,
+        steps: stepsCopy,
+      };
+    },
     onChangeStep: (state, { payload }) => {
       const stepsCopy = [...state.steps];
       stepsCopy[payload.index] = { ...stepsCopy[payload.index] };
