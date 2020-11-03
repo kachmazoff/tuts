@@ -20,6 +20,9 @@ const TutorialListComponent = ({
   isLoading,
   loadTutsList,
   onDelete,
+  ListComponent,
+
+  ...rest
 }) => {
   React.useEffect(() => {
     if (!tuts || tuts.length === 0) {
@@ -29,15 +32,24 @@ const TutorialListComponent = ({
 
   return (
     <Container>
-      <p>
+      {/* <p>
         <button onClick={loadTutsList}>Refresh</button>
-      </p>
+      </p> */}
       {!!error && <p>{error}</p>}
       {isLoading && <p>Загрузка</p>}
-      <TutorialsList tuts={tuts} onDelete={onDelete} tutsOnRow={3} />
-      <Tutorials items={tuts} />
+      {/* <TutorialsList
+        title={title}
+        tuts={tuts}
+        onDelete={onDelete}
+        tutsOnRow={3}
+      /> */}
+      <ListComponent items={tuts} {...rest} />
     </Container>
   );
+};
+
+TutorialListComponent.defaultProps = {
+  ListComponent: Tutorials,
 };
 
 export const TutorialsListModule = connect(
